@@ -76,7 +76,8 @@ public class HBaseClient {
 
     public static void main(String[] args) {
         try {
-            HBaseClient client = new HBaseClient("localhost", "2181");
+//            HBaseClient client = new HBaseClient("localhost", "2181");
+            HBaseClient client = new HBaseClient("172.17.0.2", "2181");
             client.listColumnFamilies();
             System.out.println(client.getValue("test", "1", "fs", "name"));
         } catch (IOException e) {
